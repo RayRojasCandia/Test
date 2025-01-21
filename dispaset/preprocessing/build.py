@@ -1928,7 +1928,6 @@ def build_single_run(config, profiles=None, PtLDemand=None, SectorXFlexDemand=No
                 fout = open(os.path.join(sim, 'UCM_h.gms'), "wt")
                 logging.info('Simulation with NTC')
                 for line in fin:
-                    line = line.replace('$setglobal LPFormulation 0', '$setglobal LPFormulation 1')
                     fout.write(line)
                 fin.close()
                 fout.close()

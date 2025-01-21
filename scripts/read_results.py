@@ -17,10 +17,10 @@ inputs,results = ds.get_sim_results(path='../Simulations/simulation_test',cache=
 
 # if needed, define the plotting range for the dispatch plot:
 import pandas as pd
-rng = pd.date_range(start='2016-01-01',end='2016-12-31',freq='h')
+#rng = pd.date_range(start='2016-01-01',end='2016-12-31',freq='h')
 
 # Generate country-specific plots
-ds.plot_zone(inputs,results,rng=rng)
+ds.plot_zone(inputs,results)
 
 # Bar plot with the installed capacities in all countries:
 cap = ds.plot_zone_capacities(inputs,results)
@@ -35,7 +35,7 @@ r = ds.get_result_analysis(inputs,results)
 #ds.storage_levels(inputs,results)
 #ds.plot_storage_levels(inputs,results,'NO')
 
-ds.plot_power_flow_tracing_matrix(inputs, results)
+# ds.plot_power_flow_tracing_matrix(inputs, results)
 
-ds.plot_net_flows_map(inputs,results)
-ds.plot_line_congestion_map(inputs,results)
+# ds.plot_net_flows_map(inputs,results)
+# ds.plot_line_congestion_map(inputs,results)
